@@ -1,0 +1,242 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: 'Inter', sans-serif;
+    @apply bg-gray-900 text-white;
+  }
+
+  /* Custom scrollbar styles */
+  .scrollbar-thin {
+    scrollbar-width: thin;
+  }
+
+  .scrollbar-thumb-gray-700 {
+    scrollbar-color: #374151 #1f2937;
+  }
+
+  .scrollbar-track-gray-800 {
+    scrollbar-color: #1f2937 transparent;
+  }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: #374151;
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background-color: #1f2937;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+/* Adjust box height for smoother scrolling */
+.animated-item {
+  height: 50px; 
+  margin-bottom: 10px; 
+  background-color: #111;
+  border-radius: 8px;
+  padding: 16px;
+  transition: all 0.3s ease;
+}
+
+.animated-item:hover {
+  background-color: #222;
+  transform: scale(1.05);
+}
+.aurora-text {
+  background: linear-gradient(90deg, #FF0080, #7928CA, #0070F3, #38bdf8);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: aurora 3s ease infinite;
+}
+
+@keyframes aurora {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.shiny-text {
+  position: relative;
+  display: inline-block;
+  color: #fff;
+  background: linear-gradient(90deg, #ffffff, #ff00ff, #ffffff);
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 2s linear infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 200% 50%;
+  }
+}
+body {
+  cursor: none; 
+}
+
+button:hover, a:hover {
+  cursor: none; 
+}
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(30px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+.animate-fade-in {
+  animation: fade-in 0.7s cubic-bezier(0.4,0,0.2,1) forwards;
+}
+
+button:hover ~ .smooth-cursor, a:hover ~ .smooth-cursor {
+  transform: scale(1.5); 
+  background-color: #ff00ff; 
+}
+/* Orbiting glowing ring */
+@keyframes orbit-glow {
+  0% { box-shadow: 0 0 32px 8px #22d3ee44, 0 0 0 0 #fff0; }
+  50% { box-shadow: 0 0 64px 16px #22d3ee99, 0 0 0 0 #fff0; }
+  100% { box-shadow: 0 0 32px 8px #22d3ee44, 0 0 0 0 #fff0; }
+}
+.animate-orbit-glow {
+  animation: orbit-glow 3s ease-in-out infinite;
+}
+
+/* Soft pulsing glow */
+@keyframes pulse-glow {
+  0%, 100% { opacity: 0.7; }
+  50% { opacity: 1; }
+}
+.animate-pulse-glow {
+  animation: pulse-glow 2.5s ease-in-out infinite;
+}
+
+/* Floating effect */
+@keyframes float {
+  0%, 100% { transform: translateY(0);}
+  50% { transform: translateY(-18px);}
+}
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+/* 3D Glow Hover Animation for Project Cards */
+.project-3d-hover {
+  transition: 
+    transform 0.35s cubic-bezier(.22,1,.36,1), 
+    box-shadow 0.35s cubic-bezier(.22,1,.36,1);
+  will-change: transform, box-shadow;
+}
+.project-3d-hover:hover {
+  transform: translateY(-18px) scale(1.045) rotateZ(-2deg) perspective(600px) rotateX(4deg);
+  box-shadow: 0 8px 32px 0 rgba(139,92,246,0.25), 0 0 32px 4px #6366f1aa;
+  z-index: 2;
+}
+/* Add to your index.css or global CSS */
+@keyframes bounce-once {
+  0% { transform: translateY(0);}
+  20% { transform: translateY(-10px);}
+  40% { transform: translateY(0);}
+  100% { transform: translateY(0);}
+}
+.animate-bounce-once {
+  animation: bounce-once 1s 1;
+}
+/* Fade in up for cards */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(40px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+.animate-fadeInUp {
+  animation: fadeInUp 0.8s cubic-bezier(0.4,0,0.2,1) both;
+}
+
+/* Fade in down for heading/desc */
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-40px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+.animate-fadeInDown {
+  animation: fadeInDown 0.8s cubic-bezier(0.4,0,0.2,1) both;
+}
+
+/* Modal pop-in */
+@keyframes modalPopIn {
+  from { opacity: 0; transform: scale(0.85);}
+  to { opacity: 1; transform: scale(1);}
+}
+.animate-modalPopIn {
+  animation: modalPopIn 0.5s cubic-bezier(0.4,0,0.2,1) both;
+}
+@keyframes modalFadeIn {
+  from { opacity: 0;}
+  to { opacity: 1;}
+}
+.animate-modalFadeIn {
+  animation: modalFadeIn 0.3s cubic-bezier(0.4,0,0.2,1) both;
+}
+
+@keyframes fadeInLeft {
+  from { opacity: 0; transform: translateX(-40px);}
+  to { opacity: 1; transform: translateX(0);}
+}
+.animate-fadeInLeft {
+  animation: fadeInLeft 0.8s cubic-bezier(0.4,0,0.2,1) both;
+}
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(40px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+.animate-fadeInUp {
+  animation: fadeInUp 0.8s cubic-bezier(0.4,0,0.2,1) both;
+}
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-40px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+.animate-fadeInDown {
+  animation: fadeInDown 0.8s cubic-bezier(0.4,0,0.2,1) both;
+}
+@keyframes fadeIn {
+  from { opacity: 0;}
+  to { opacity: 1;}
+}
+.animate-fadeIn {
+  animation: fadeIn 0.8s cubic-bezier(0.4,0,0.2,1) both;
+}
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(139, 92, 246, 0.7);}
+  50% { box-shadow: 0 0 0 6px rgba(139, 92, 246, 0);}
+}
+.animate-pulse-glow {
+  animation: pulse-glow 1.5s infinite;
+}
