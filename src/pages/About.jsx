@@ -41,7 +41,7 @@ const socials = [
     label: 'GitHub'
   },
   {
-    href: 'https://www.linkedin.com/in/sriman-h-419930258?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
+    href: 'https://www.linkedin.com/in/srimanh',
     icon: <i className="fab fa-linkedin"></i>,
     label: 'LinkedIn'
   },

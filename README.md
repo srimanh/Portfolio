@@ -30,7 +30,7 @@ Welcome to my portfolio! I'm Sriman 👨‍💻, a passionate and aspiring **Ful
 Feel free to connect or collaborate!
 
 - 📧 Email: `srimandgl2004@gmail.com`
-- 💼 LinkedIn: [linkedin.com/in/yourprofile](https://www.linkedin.com/in/sriman-h-419930258?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app)
+- 💼 LinkedIn: [linkedin.com/in/yourprofile](https://www.linkedin.com/in/srimanh)
 - 💻 GitHub: [github.com/yourusername](https://github.com/srimanh)
 
 ---
